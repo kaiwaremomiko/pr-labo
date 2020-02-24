@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Npos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Corporate name</th>
+      <th>Prefecture</th>
+      <th>Address</th>
+      <th>Representative</th>
+      <th>Certification date</th>
+      <th>Establish purpose</th>
+      <th>Field</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @npos.each do |npo| %>
+      <tr>
+        <td><%= npo.corporate_name %></td>
+        <td><%= npo.prefecture %></td>
+        <td><%= npo.address %></td>
+        <td><%= npo.representative %></td>
+        <td><%= npo.certification_date %></td>
+        <td><%= npo.establish_purpose %></td>
+        <td><%= npo.field %></td>
+        <td><%= link_to 'Show', npo %></td>
+        <td><%= link_to 'Edit', edit_npo_path(npo) %></td>
+        <td><%= link_to 'Destroy', npo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Npo', new_npo_path %>

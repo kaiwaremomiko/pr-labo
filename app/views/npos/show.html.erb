@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Corporate name:</strong>
+  <%= @npo.corporate_name %>
+</p>
+
+<p>
+  <strong>Prefecture:</strong>
+  <%= @npo.prefecture %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @npo.address %>
+</p>
+
+<p>
+  <strong>Representative:</strong>
+  <%= @npo.representative %>
+</p>
+
+<p>
+  <strong>Certification date:</strong>
+  <%= @npo.certification_date %>
+</p>
+
+<p>
+  <strong>Establish purpose:</strong>
+  <%= @npo.establish_purpose %>
+</p>
+
+<p>
+  <strong>Field:</strong>
+  <%= @npo.field %>
+</p>
+
+<%= link_to 'Edit', edit_npo_path(@npo) %> |
+<%= link_to 'Back', npos_path %>
