@@ -25,6 +25,7 @@ test:
 
 production:
   <<: *default
-  database: prlabo_production
+  # database: prlabo_production
+  database: prlabo_development
   username: prlabo
   password: <%= ENV['PRLABO_DATABASE_PASSWORD'] %>
