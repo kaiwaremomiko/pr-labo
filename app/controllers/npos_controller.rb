@@ -23,43 +23,43 @@ class NposController < ApplicationController
 
   # POST /npos
   # POST /npos.json
-  def create
-    @npo = Npo.new(npo_params)
+  # def create
+  #   @npo = Npo.new(npo_params)
 
-    respond_to do |format|
-      if @npo.save
-        format.html { redirect_to @npo, notice: 'Npo was successfully created.' }
-        format.json { render :show, status: :created, location: @npo }
-      else
-        format.html { render :new }
-        format.json { render json: @npo.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @npo.save
+  #       format.html { redirect_to @npo, notice: 'Npo was successfully created.' }
+  #       format.json { render :show, status: :created, location: @npo }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @npo.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /npos/1
   # PATCH/PUT /npos/1.json
-  def update
-    respond_to do |format|
-      if @npo.update(npo_params)
-        format.html { redirect_to @npo, notice: 'Npo was successfully updated.' }
-        format.json { render :show, status: :ok, location: @npo }
-      else
-        format.html { render :edit }
-        format.json { render json: @npo.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @npo.update(npo_params)
+  #       format.html { redirect_to @npo, notice: 'Npo was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @npo }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @npo.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /npos/1
   # DELETE /npos/1.json
-  def destroy
-    @npo.destroy
-    respond_to do |format|
-      format.html { redirect_to npos_url, notice: 'Npo was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @npo.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to npos_url, notice: 'Npo was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
