@@ -6,7 +6,7 @@
 #
 default: &default
   adapter: postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch("heroRAILS_MAX_THREADS") { 5 } %>
   username: sunsukeyo1
   password: 0719
   host: localhost
@@ -25,7 +25,6 @@ test:
 
 production:
   <<: *default
-  # database: prlabo_production
-  database: prlabo_development
+  database: prlabo_production
   username: prlabo
   password: <%= ENV['PRLABO_DATABASE_PASSWORD'] %>

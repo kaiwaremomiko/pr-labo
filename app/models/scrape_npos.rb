@@ -7,9 +7,9 @@ class Scrape_npos
     links = []
     next_url = ""
 
-    (1..50).each do |i|
+    (3..50).each do |i|
       current_page = agent.get("https://www.npo-homepage.go.jp/npoportal/list?ket=&page=" + i.to_s)
-      elements = current_page.search('//*[@id="main-body-mobile"]/table/tbody/tr/td[2]/a')
+      elements = current_page.search('/html/body/div/div/div/div/h6/a')
       elements.each do |ele|
         links << ele[:href]
       end
