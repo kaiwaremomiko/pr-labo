@@ -1,39 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Corporate name:</strong>
-  <%= @npo.corporate_name %>
-</p>
+<table>
+  <tr>
+    <th>会社名</th>
+    <td><%= @npo.corporate_name %></td>
+  </tr>
+  <tr>
+    <th>住所</th>
+    <td><%= @npo.address %></td>
+  </tr>
+  <tr>
+    <th>代表者名</th>
+    <td><%= @npo.representative %></td>
+  </tr>
+  <tr>
+    <th>設立認証年月日</th>
+    <td><%= @npo.certification_date %></td>
+  </tr>
+  <tr>
+    <th>定款に記載された目的</th>
+    <td><%= @npo.establish_purpose %></td>
+  </tr>
+  <tr>
+  <th>分野</th>
+  <td><%= @npo.field %></td>
+  </tr>
+</table>
 
-<p>
-  <strong>Prefecture:</strong>
-  <%= @npo.prefecture %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @npo.address %>
-</p>
-
-<p>
-  <strong>Representative:</strong>
-  <%= @npo.representative %>
-</p>
-
-<p>
-  <strong>Certification date:</strong>
-  <%= @npo.certification_date %>
-</p>
-
-<p>
-  <strong>Establish purpose:</strong>
-  <%= @npo.establish_purpose %>
-</p>
-
-<p>
-  <strong>Field:</strong>
-  <%= @npo.field %>
-</p>
 
 <%#= link_to 'Edit', edit_npo_path(@npo) %> 
 <%= link_to 'Back', root_path %>
