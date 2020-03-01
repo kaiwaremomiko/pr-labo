@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= render 'layouts/google_tag_manager' if Rails.env.production? %>
     <title>Prlabo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <%= stylesheet_link_tag "application", media: "all",
@@ -10,6 +11,7 @@
   </head>
 
   <body>
+  <%= render 'layouts/google_tag_manager_noscript' if Rails.env.production? %>
   <%= render 'layouts/header' %>
     <%= yield %>
   <%= render 'layouts/footer' %>
