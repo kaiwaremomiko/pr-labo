@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<% content_for :title do %>
+  <%= @npo.corporate_name + "の詳細情報" | PR-LABO %>
+<% end %>
 
 <table class="table03">
   <tr>
