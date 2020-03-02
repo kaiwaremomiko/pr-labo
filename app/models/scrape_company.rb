@@ -22,25 +22,10 @@ class Scrape_company
   end
 
 
-  #県のみを取得し、データベースに保存
-  def self.addPrefectureToNpos(link)
-    agent = Mechanize.new
-    page = agent.get(link)
-
-    corporate_name = page.search('//*[@id="main_text"]/div[1]/h3').inner_text if page.search('//*[@id="main_text"]/div[1]/h3')
-    prefecture = page.search('//*[@id="main_text"]/div[2]/div/table[1]/tbody/tr[1]/td').inner_text if page.search('//*[@id="main_text"]/div[2]/div/table[1]/tbody/tr[1]/td')
-    
-    npo = Npo.where(corporate_name: corporate_name).first_or_initialize
-    npo.prefecture = prefecture
-
-    npo.save
-  end
-
   #すべての要素を取得し、データベースに保存
   def self.getEachElementFromLink(link)
     agent = Mechanize.new
     page = agent.get(link)
-
 
     corporate_name = page.search('/html/body/div/div/div[2]/table[2]/tbody/tr[1]/td[2]').inner_text if page.search('/html/body/div/div/div[2]/table[2]/tbody/tr[1]/td[2]')
     postal_code = page.search('/html/body/div/div/div[2]/table[2]/tbody/tr[3]/td[2]').inner_text if page.search('/html/body/div/div/div[2]/table[2]/tbody/tr[3]/td[2]')

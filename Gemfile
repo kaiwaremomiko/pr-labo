@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 gem 'pg'
 
+gem 'sitemap_generator'
+
 # パスワードのハッシュ化
 gem 'bcrypt',  '3.1.12'
 # ページャー実装
