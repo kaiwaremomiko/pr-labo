@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
+<% content_for :title do %>
+  <%= @company.company_name + "の詳細情報 | PR-LABO" %>
+<% end %>
 
-<p>
-  <strong>Company name:</strong>
-  <%= @company.company_name %>
-</p>
+<table class="table03">
+  <tr>
+    <th>会社名</th>
+    <td><%= @company.company_name %></td>
+  </tr>
+  <tr>
+    <th>住所</th>
+    <td><%= @company.address %></td>
+  </tr>
+  <tr>
+    <th>郵便番号</th>
+    <td><%= @company.postal_code %></td>
+  </tr>
+</table>
 
-<p>
-  <strong>Postal code:</strong>
-  <%= @company.postal_code %>
-</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @company.address %>
-</p>
-
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%#= link_to 'Edit', edit_npo_path(@npo) %> 
+<%= link_to 'Back', root_path %>
