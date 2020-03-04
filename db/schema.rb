@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_234224) do
+ActiveRecord::Schema.define(version: 2020_03_04_153117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 2020_03_03_234224) do
     t.string "area"
     t.text "pr"
     t.string "img"
+    t.string "representative"
+    t.string "tel_number"
+    t.string "work_field"
+    t.string "establishment"
+    t.string "capital"
   end
 
   create_table "npos", force: :cascade do |t|
