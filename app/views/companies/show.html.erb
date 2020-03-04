@@ -28,10 +28,27 @@
     <th>郵便番号</th>
     <td><%= @company.postal_code %></td>
   </tr>
-    <tr>
-    <th>仕事内容</th>
-    <td><%= simple_format(@company.pr) %></td>
+  <tr>
+    <th>電話番号</th>
+    <td><%= @company.tel_number %></td>
   </tr>
+  <tr>
+    <th>設立</th>
+    <td><%= @company.establishment %></td>
+  </tr>
+  <tr>
+    <th>資本金</th>
+    <td><%= @company.capital %></td>
+  </tr>
+  <tr>
+    <th>事業領域</th>
+    <td><%= @company.work_field %></td>
+  </tr>
+  <tr>
+    <th>代表者</th>
+    <td><%= @company.representative %></td>
+  </tr>
+
 </table>
 
 
