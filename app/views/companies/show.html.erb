@@ -3,6 +3,10 @@
   <%= @company.company_name + "の詳細情報 | PR-LABO" %>
 <% end %>
 
+<p>
+  <%= image_tag @company.img.url if @company.img? %>
+</p>
+
 <table class="table03">
   <tr>
     <th>会社名</th>
