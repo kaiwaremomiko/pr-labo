@@ -31,6 +31,12 @@
     <%= form.text_area :pr, :size => "60x15" %>
   </div>
 
+  <div class="field">
+   <%= form.label :img %>
+   <%= form.file_field :img, class: "image" %>
+  </div>
+
+  <p><%= form.check_box :remove_img %>画像を削除する</p>
 
   <div class="actions">
     <%= form.submit %>

@@ -2,6 +2,9 @@
 <% content_for :title do %>
   <%= @company.company_name + "の詳細情報 | PR-LABO" %>
 <% end %>
+<p>
+  <%= image_tag @post.img.url　if @post.img? %>
+</p>
 
 <table class="table03">
   <tr>
