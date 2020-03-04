@@ -6,6 +6,10 @@ ruby '2.5.1'
 gem 'pg'
 #sitemap生成
 gem 'sitemap_generator'
+#S3
+gem 'fog-aws'
+#.env
+gem 'dotenv-rails'
 #画像投稿機能
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 # パスワードのハッシュ化
