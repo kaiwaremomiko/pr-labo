@@ -6,7 +6,10 @@
 <h1 class="companytitle"><%= @company.company_name %></h1>
 <br>
 <br>
-<p class="boldfont"><%= simple_format(@company.pr) %></p>
+<div class="box27">
+    <span class="box-title">会社紹介</span>
+    <p><%= simple_format(@company.pr) %></p>
+</div>
 
 <p>
   <%= image_tag @company.img.url if @company.img? %>
