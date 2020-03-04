@@ -6,7 +6,7 @@
 <h1 class="companytitle"><%= @company.company_name %></h1>
 <br>
 <br>
-<p><%= simple_format(@company.pr) %></p>
+<p class="boldfont"><%= simple_format(@company.pr) %></p>
 
 <p>
   <%= image_tag @company.img.url if @company.img? %>
