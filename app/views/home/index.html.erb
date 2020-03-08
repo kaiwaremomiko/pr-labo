@@ -2,23 +2,14 @@
   <%= "法人情報掲載ならPR-LABO" %>
 <% end %>
 
-<table class="tabletop">
-  <thead>
-    <tr>
-      <th>法人名</th>
-      <th>所在地</th>
-    </tr>
-  </thead>
 
-  <tbody>
+<ul class="block-grid block-grid-1-2-3">
     <% @npos.each do |npo| %>
-      <tr>
-        <td><%= link_to npo.corporate_name, npo %></td>
-        <td><%= npo.prefecture %></td>
-      </tr>
+        <li>
+            <%= image_tag 'noimage.png', :size =>'600x360'　%>
+            <%= link_to npo.corporate_name, npo %>
+        </li>
     <% end %>
-  </tbody>
-</table>
-<br>
+</ul>
 
 <%= paginate(@npos) %>
