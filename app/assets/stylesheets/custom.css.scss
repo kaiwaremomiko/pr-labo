@@ -294,31 +294,3 @@
 
 	background-color:navy;
 }
-
-.block-grid {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	margin: 0 -1% 30px;
-	padding: 0;
-  }
-  .block-grid li {
-	flex: 0 1 98%;
-	margin: 0 1% 30px;
-	padding: 0;
-	background: pink;
-  }
-  .block-grid a {
-	text-decoration: none;
-	font-size: 1.6em;
-  }
-  @media (min-width: 600px){
-	.block-grid-1-2-3 li {
-	  flex: 0 1 48%;
-	}
-  }
-  @media (min-width: 800px){
-	.block-grid-1-2-3 li {
-	  flex: 0 1 31.3333%;
-	}
-  }
