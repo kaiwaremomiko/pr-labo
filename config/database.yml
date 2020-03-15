@@ -7,14 +7,14 @@
 default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("heroRAILS_MAX_THREADS") { 5 } %>
-  username: sunsukeyo1
-  password: 0719
+  username: postgres
+  password: sunsuke719
   host: localhost
   timeout: 5000
 
 development:
   <<: *default
-  database: prlabo_development
+  database: mydb
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
