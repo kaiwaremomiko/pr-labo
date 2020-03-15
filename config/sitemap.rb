@@ -1,5 +1,9 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.pr-labo.net"
+SitemapGenerator::Sitemap.sitemaps_host = "https://prlabobacket.s3.amazonaws.com/"
+SitemapGenerator::Sitemap.public_path = 'public/'
+SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
 
 SitemapGenerator::Sitemap.create do
   add root_path
@@ -7,6 +11,11 @@ SitemapGenerator::Sitemap.create do
   Npo.find_each do |npo|
     add npo_path(npo), lastmod: npo.updated_at
   end
+
+  Company.find_each do |company|
+    add company_path(company), lastmod: company.updated_at
+  end
+
 
   # Put links creation logic here.
   #
