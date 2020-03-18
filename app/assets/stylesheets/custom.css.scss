@@ -558,3 +558,20 @@
   .iconbox-blue .box-head-blue{
 	background: #00bfff !important; /* 背景色 */
   }
+
+
+  /************************************
+** アイコンフキダシボックス(ピンク)
+************************************/
+/* ボックス全体 */
+.iconbox-pink{
+	background: #fdf1f1 !important; /* 背景色 */
+  }
+  /* ボックスタイトル */
+  .iconbox-pink .box-head-pink{
+	background: #f7bcbc !important; /* 背景色 */
+  }
+  /* 箇条書き(番号) 行頭番号 */
+  .iconbox .list-number li:before {
+	background: #f7bcbc !important; /* 背景色 */
+  }
