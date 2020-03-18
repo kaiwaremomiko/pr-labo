@@ -1,22 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<table class="tabletop">
-  <thead>
-    <tr>
-      <th>法人名</th>
-      <th>所在地</th>
-    </tr>
-  </thead>
+<% breadcrumb :companies %>
 
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= link_to company.company_name, company %></td>
-        <td><%= company.area %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
+<% @companies.each do |company| %>
+    <div class="iconbox iconbox-blue">
+    <div class="box-title box-head-blue"><%= link_to company.company_name, company %></div>
+    <div class="iconbox-wrap">
+    <div class="box-content">
+    <p><%= company.pr %></p>
+    </div>
+    <div class="iconballoon">
+    <div class="icon"><%= image_tag 'noimage.png', :size =>'70x70' %></div>
+    </div>
+    </div>
+    </div>
+<% end %>
 
 <%= paginate(@companies) %>

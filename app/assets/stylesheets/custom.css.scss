@@ -541,3 +541,20 @@
 	  top:2px;/* 上からの距離 */
 	}
   }
+
+  .breadcrumbs{
+	text-align: left;
+	margin-left: 1%;
+  }
+
+/************************************
+** アイコンフキダシボックス(ブルー)
+************************************/
+/* ボックス全体 */
+.iconbox-blue{
+	background: #f2fbff !important; /* 背景色 */
+  }
+  /* ボックスタイトル */
+  .iconbox-blue .box-head-blue{
+	background: #00bfff !important; /* 背景色 */
+  }
