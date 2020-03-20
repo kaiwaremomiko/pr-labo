@@ -1,0 +1,72 @@
+<%= form_with(model: occupation, local: true) do |form| %>
+  <% if occupation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(occupation.errors.count, "error") %> prohibited this occupation from being saved:</h2>
+
+      <ul>
+      <% occupation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :occupation_name %>
+    <%= form.text_field :occupation_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :work_contents %>
+    <%= form.text_field :work_contents %>
+  </div>
+
+  <div class="field">
+    <%= form.label :how_to_work %>
+    <%= form.text_field :how_to_work %>
+  </div>
+
+  <div class="field">
+    <%= form.label :under_high_school_graduate %>
+    <%= form.text_field :under_high_school_graduate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :high_school_graduate %>
+    <%= form.text_field :high_school_graduate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :college_graduate %>
+    <%= form.text_field :college_graduate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_employee %>
+    <%= form.text_field :number_employee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :working_time %>
+    <%= form.text_field :working_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payment %>
+    <%= form.text_field :payment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
