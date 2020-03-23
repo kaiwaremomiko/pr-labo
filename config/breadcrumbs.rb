@@ -11,7 +11,7 @@ crumb :companies do
 end
 
 crumb :company do |company|
-  link "#{company.company_name}", company_path(company)
+  link "#{company.corporate_name}", company_path(company)
   parent :companies
 end
 

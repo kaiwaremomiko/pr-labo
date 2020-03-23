@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 <% content_for :title do %>
-  <%= @company.company_name + "の詳細情報 | PR-LABO" %>
+  <%= @company.corporate_name + "の詳細情報 | PR-LABO" %>
 <% end %>
 
-<h1 class="companytitle"><%= @company.company_name %></h1>
+<h1 class="companytitle"><%= @company.corporate_name %></h1>
 <br>
 <% breadcrumb :company, @company %>
 <br>
@@ -19,7 +19,7 @@
 <table class="table03">
   <tr>
     <th>会社名</th>
-    <td><%= @company.company_name %></td>
+    <td><%= @company.corporate_name %></td>
   </tr>
   <tr>
     <th>住所</th>

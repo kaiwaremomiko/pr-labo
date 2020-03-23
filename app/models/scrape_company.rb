@@ -7,13 +7,15 @@ class Scrape_company
     links = []
     next_url = ""
 
-    (2..30).each do |i|
+    (31..1000).each do |i|
       current_page = agent.get("https://xn--zcklx7evic7044c1qeqrozh7c.com/companies/prefs/13?page=" + i.to_s)
-      elements = current_page.search('/html/body/div/div/div[3]/div/h6/a')
-      elements.each do |ele|
-        links << ele[:href]
+      (3..32).each do |l|
+        elements = current_page.search('/html/body/div/div/div['+l.to_s+']/div/h6/a')
+        elements.each do |ele|
+          links << "https://xn--zcklx7evic7044c1qeqrozh7c.com" + ele[:href]
+        end
       end
-      end
+    end
 
     links.each do |link|
       # getEachElementFromLink(link)
@@ -32,11 +34,13 @@ class Scrape_company
     address = page.search('/html/body/div/div/div[2]/table[2]/tbody/tr[4]/td[2]').inner_text if page.search('/html/body/div/div/div[2]/table[2]/tbody/tr[4]/td[2]')
     
     company = Company.where(corporate_name: corporate_name).first_or_initialize
-    copmany.corporate_name = corporate_name
+    company.corporate_name = corporate_name
     company.postal_code = postal_code
     company.address = address
 
+    if corporate_name.include?("会社")
     company.save
+    end
   end
 end
 
