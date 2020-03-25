@@ -1,3 +1,60 @@
 // Place all the styles related to the occupations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.occupation{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .occupation tr{
+    border-bottom: solid 2px white;
+  }
+  
+  .occupation tr:last-child{
+    border-bottom: none;
+  }
+  
+  .occupation th{
+    position: relative;
+    text-align: left;
+    width: 30%;
+    background-color: #52c2d0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .occupation th:after{
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:calc(50% - 10px);
+    right:-10px;
+    border-left: 10px solid #52c2d0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  
+  .occupation td{
+    text-align: left;
+    width: 70%;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px 0;
+  }
+
+  .occupation-h1:first-letter {
+    font-size: 2em;
+    color: #7172ac;
+  }
+
+  .occupation-h2 {
+    padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: #f4f4f4;/*背景色*/
+    border-left: solid 5px #7db4e6;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
+  }

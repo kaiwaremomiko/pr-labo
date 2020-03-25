@@ -1,59 +1,65 @@
 <p id="notice"><%= notice %></p>
+<% content_for :title do %>
+  <%=  @occupation.occupation_name + "の職業詳細 | PR-LABO" %>
+<% end %>
 
-<p>
-  <strong>Occupation name:</strong>
-  <%= @occupation.occupation_name %>
-</p>
+<h2 class="occupation-h1"><%= @occupation.occupation_name %></h2>
+<br>
+<p><%= @occupation.category %></p>
+<br>
 
-<p>
-  <strong>Category:</strong>
-  <%= @occupation.category %>
-</p>
-
-<p>
-  <strong>Work contents:</strong>
-  <%= @occupation.work_contents %>
-</p>
-
-<p>
-  <strong>How to work:</strong>
-  <%= @occupation.how_to_work %>
-</p>
-
-<p>
-  <strong>Under high school graduate:</strong>
-  <%= @occupation.under_high_school_graduate %>
-</p>
-
-<p>
-  <strong>High school graduate:</strong>
-  <%= @occupation.high_school_graduate %>
-</p>
-
-<p>
-  <strong>College graduate:</strong>
-  <%= @occupation.college_graduate %>
-</p>
-
-<p>
-  <strong>Number employee:</strong>
-  <%= @occupation.number_employee %>
-</p>
-
-<p>
-  <strong>Working time:</strong>
-  <%= @occupation.working_time %>
-</p>
-
-<p>
-  <strong>Payment:</strong>
-  <%= @occupation.payment %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @occupation.age %>
-</p>
+<div class="box27">
+    <span class="box-title">職業紹介</span>
+    <p><%= simple_format(@occupation.work_contents) %></p>
+</div>
+<br>
+<br>
+<h3 class="occupation-h2"><%= @occupation.occupation_name %>として働くために</h3>
+<br>
+<p><%= @occupation.how_to_work %></p>
+<br>
+<br>
+<br>
+<h3 class="occupation-h2">学歴</h3>
+<br>
+<table class="table03">
+  <tr>
+    <th>高卒以下</th>
+    <td><%= @occupation.under_high_school_graduate %></td>
+  </tr>
+  <tr>
+    <th>高卒</th>
+    <td><%= @occupation.high_school_graduate %></td>
+  </tr>
+  <tr>
+    <th>大卒</th>
+    <td><%= @occupation.college_graduate %></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<h3 class="occupation-h2">基本データ</h3>
+<br>
+<table class="table03">
+  <tr>
+    <th>労働者数</th>
+    <td><%= @occupation.number_employee %></td>
+  </tr>
+  <tr>
+    <th>労働時間</th>
+    <td><%= @occupation.working_time %></td>
+  </tr>
+  <tr>
+    <th>賃金</th>
+    <td><%= @occupation.payment %></td>
+  </tr>
+  <tr>
+    <th>平均年齢</th>
+    <td><%= @occupation.age %></td>
+  </tr>
+</table>
+<br>
 
 <%= link_to 'Edit', edit_occupation_path(@occupation) %> |
 <%= link_to 'Back', occupations_path %>
