@@ -2,7 +2,9 @@
 <% content_for :title do %>
   <%=  @occupation.occupation_name + "の職業詳細 | PR-LABO" %>
 <% end %>
-
+<p>このページのコンテンツは、厚労省の<cite><a href="https://shigoto.mhlw.go.jp/User/">職業情報提供サイト</a></cite>より引用しています。</p>
+<br>
+<br>
 <h2 class="occupation-h1"><%= @occupation.occupation_name %></h2>
 <br>
 <p><%= @occupation.category %></p>
