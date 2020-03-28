@@ -10,9 +10,27 @@ crumb :companies do
   link '企業一覧', companies_path
 end
 
+crumb :npos do
+  link 'NPO一覧', npos_path
+end
+
+crumb :occupations do
+  link '職業一覧', occupations_path
+end
+
 crumb :company do |company|
   link "#{company.corporate_name}", company_path(company)
   parent :companies
+end
+
+crumb :npo do |npo|
+  link "#{npo.corporate_name}", npo_path(npo)
+  parent :npos
+end
+
+crumb :occupation do |occupation|
+  link "#{occupation.occupation_name}", occupation_path(occupation)
+  parent :occupations
 end
 
 # crumb :projects do
