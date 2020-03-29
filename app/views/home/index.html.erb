@@ -3,7 +3,23 @@
 <% end %>
 
 <br>
-
+<div class="top-description">
+<p><h2><strong>「すべての団体が"魅力"を世界に届けられる世の中に」</h2></strong></p>
+<br>
+<br>
+<p>PR-LABO(PRラボ)は、様々な企業・NPO・研究会などあらゆる団体の情報発信を支援するWEBサービスです。</p>
+<br>
+<p>インターネットに詳しくない方でも、気軽に情報を発信でき、組織の魅力を世の中に伝えられるサービスを目指しています。</p>
+<br>
+<p>「こういう発信をすれば強み・良さが伝わるんだ」</p>
+<p>「発信した結果、人の採用につながった」</p>
+<p>「改めて、自社の良さや働く意義に気づいた」</p>
+<p>など、組織が改善するキッカケをサポートできるよう、サービスを鋭意改善中です。</p>
+<br>
+<p>機能追加・改善要望があれば、お問い合わせフォームからご連絡ください。</p>
+</div>
+<br>
+<br>
 <% @npos.each do |npo| %>
     <div class="iconbox iconbox-green">
     <div class="box-title box-head-green"><%= link_to npo.corporate_name, npo %></div>
@@ -17,5 +33,3 @@
     </div>
     </div>
 <% end %>
-
-<%= paginate(@npos) %>

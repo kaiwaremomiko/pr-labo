@@ -1,4 +1,16 @@
 <p id="notice"><%= notice %></p>
+
+<% content_for :markup do %>
+  <script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@type" : "Organization",
+    "name" : <%= @npo.corporate_name %>,
+    "address": <%= @npo.address %>
+}
+</script>
+<% end %>
+
 <% content_for :title do %>
   <%= @npo.corporate_name + "の詳細情報 | PR-LABO" %>
 <% end %>
@@ -34,3 +46,4 @@
 
 <%#= link_to 'Edit', edit_npo_path(@npo) %> 
 <%= link_to 'Back', root_path %>
+

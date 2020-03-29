@@ -1,4 +1,16 @@
 <p id="notice"><%= notice %></p>
+
+<% content_for :markup do %>
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@type" : "Organization",
+    "name" : <%= @company.corporate_name %>,
+    "address": <%= @company.address %>
+}
+</script>
+<% end %>
+
 <% content_for :title do %>
   <%= @company.corporate_name + "の詳細情報 | PR-LABO" %>
 <% end %>

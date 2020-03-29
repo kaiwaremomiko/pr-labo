@@ -38,7 +38,7 @@ class Scrape_company
     company.postal_code = postal_code
     company.address = address
 
-    if corporate_name.include?("会社")
+    if corporate_name.include?("組合") || corporate_name.include?("基金")
     company.save
     end
   end

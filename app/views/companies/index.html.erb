@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<% content_for :title do %>
+  <%= "掲載企業一覧 | PR-LABO" %>
+<% end %>
 <% breadcrumb :companies %>
 
 <% @companies.each do |company| %>
