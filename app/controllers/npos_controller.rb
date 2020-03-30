@@ -4,7 +4,7 @@ class NposController < ApplicationController
   # GET /npos
   # GET /npos.json
   def index
-    @npos = Npo.page(params[:page])
+    @npos = Npo.page(params[:page]).search(params[:search])
   end
 
   # GET /npos/1

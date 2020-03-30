@@ -4,6 +4,14 @@
 <% end %>
 
 <% breadcrumb :npos %>
+<div class="search-form">
+<%= form_tag(npos_path, :method => "get") do %>
+<%= text_field_tag :search,'',placeholder: "法人名を入力" %> 
+<%= submit_tag "検索" ,:username => nil ,class: "button is-info"%> 
+<% end %> 
+</div>
+<br>
+<br>
 
 <% @npos.each do |npo| %>
     <div class="iconbox iconbox-green">
