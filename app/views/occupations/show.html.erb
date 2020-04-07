@@ -62,3 +62,15 @@
     <td><%= @occupation.age %>歳</td>
   </tr>
 </table>
+
+<div class="parent clearfix">
+<% if params[:id].to_i > 1 %>
+    <div class="left"><%= link_to '前のページへ', occupation_path(params[:id].to_i - 1) %></div>
+<% end %>
+<% if params[:id].to_i < 344 %>
+    <div class="right"><%= link_to '次のページへ', occupation_path(params[:id].to_i + 1) %></div>
+<% end %>
+</div>
+<br>
+<br>
+<%= link_to '職業一覧へ', occupations_path %>

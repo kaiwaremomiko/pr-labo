@@ -63,6 +63,14 @@
   </tr>
 </table>
 
-
-<%#= link_to 'Edit', edit_npo_path(@npo) %> 
-<%= link_to 'Back', root_path %>
+<div class="parent clearfix">
+<% if params[:id].to_i > 1 %>
+    <div class="left"><%= link_to '前のページへ', company_path(params[:id].to_i - 1) %></div>
+<% end %>
+<% if params[:id].to_i < 26956 %>
+    <div class="right"><%= link_to '次のページへ', company_path(params[:id].to_i + 1) %></div>
+<% end %>
+</div>
+<br>
+<br>
+<%= link_to '企業一覧へ', companies_path %>

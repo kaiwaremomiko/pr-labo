@@ -47,6 +47,16 @@
 </table>
 
 
-<%#= link_to 'Edit', edit_npo_path(@npo) %> 
-<%= link_to 'Back', root_path %>
+<div class="parent clearfix">
+<% if params[:id].to_i > 1 %>
+    <div class="left"><%= link_to '前のページへ', npo_path(params[:id].to_i - 1) %></div>
+<% end %>
+<% if params[:id].to_i < 616 %>
+    <div class="right"><%= link_to '次のページへ', npo_path(params[:id].to_i + 1) %></div>
+<% end %>
+</div>
+<br>
+<br>
+<%= link_to 'NPO法人一覧へ', npos_path %>
+
 
