@@ -1,4 +1,9 @@
+<% content_for :noindex do %>
+<meta name="robots" content="noindex">
+<% end %>
+
 <h1>Editing Occupation</h1>
+
 
 <%= render 'form', occupation: @occupation %>
 

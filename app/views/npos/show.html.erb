@@ -19,6 +19,14 @@
 <% end %>
 <% breadcrumb :npo, @npo %>
 
+<h1 class="companytitle"><%= @npo.corporate_name %></h1>
+<br>
+
+<div class="box27">
+    <span class="box-title">法人紹介</span>
+    <p><%= simple_format(@npo.pr) %></p>
+</div>
+
 <table class="table03">
   <tr>
     <th>会社名</th>

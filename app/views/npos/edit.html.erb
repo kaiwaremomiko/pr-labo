@@ -1,6 +1,12 @@
-<h1>404 not found</h1>
+<% content_for :noindex do %>
+<meta name="robots" content="noindex">
+<% end %>
 
-<%#= render 'form', npo: @npo %>
 
-<%#= link_to 'Show', @npo %> |
-<%#= link_to 'Back', npos_path %>
+<h1>編集画面</h1>
+<br>
+
+<%= render 'form', npo: @npo %>
+
+<%= link_to 'Show', @npo %> |
+<%= link_to 'Back', npos_path %>
