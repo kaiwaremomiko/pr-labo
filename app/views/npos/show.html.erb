@@ -27,6 +27,10 @@
     <p><%= simple_format(@npo.pr) %></p>
 </div>
 
+<p>
+  <%= image_tag @npo.img.url if @npo.img? %>
+</p>
+
 <table class="table03">
   <tr>
     <th>会社名</th>
@@ -59,7 +63,7 @@
 <% if params[:id].to_i > 1 %>
     <div class="left"><%= link_to '前のページへ', npo_path(params[:id].to_i - 1) %></div>
 <% end %>
-<% if params[:id].to_i < 616 %>
+<% if params[:id].to_i < 29478 %>
     <div class="right"><%= link_to '次のページへ', npo_path(params[:id].to_i + 1) %></div>
 <% end %>
 </div>

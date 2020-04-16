@@ -69,6 +69,6 @@ class NposController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def npo_params
-      params.require(:npo).permit(:corporate_name, :prefecture, :address, :representative, :certification_date, :establish_purpose, :field, :pr)
+      params.require(:npo).permit(:corporate_name, :prefecture, :address, :representative, :certification_date, :establish_purpose, :field, :pr, :img, :remove_img)
     end
 end
