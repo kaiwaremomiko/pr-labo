@@ -1,1 +1,1 @@
-Sitemap: https://prlabobacket.s3.amazonaws.com/sitemaps/sitemap.xml.gz
+Sitemap: https://s3-us-east-2.amazonaws.com/prlabbacket/sitemaps/sitemap.xml.gz

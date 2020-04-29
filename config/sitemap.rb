@@ -1,9 +1,14 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.pr-labo.net"
-SitemapGenerator::Sitemap.sitemaps_host = "https://prlabobacket.s3.amazonaws.com/"
-SitemapGenerator::Sitemap.public_path = 'public/'
+SitemapGenerator::Sitemap.sitemaps_host = "https://s3-us-east-2.amazonaws.com/#{ENV['AWS_S3_BUCKET']}/"
+SitemapGenerator::Sitemap.public_path = 'tmp/'
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
-SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider: 'AWS',
+  aws_access_key_id: ENV['AWS_S3_ACCESS_KEY_ID'],
+  aws_secret_access_key: ENV['AWS_S3_SECRET_ACCESS_KEY'],
+  fog_directory: ENV['AWS_S3_BUCKET'],
+  fog_region: 'us-east-2')
+
 
 SitemapGenerator::Sitemap.create do
   add root_path
@@ -14,6 +19,10 @@ SitemapGenerator::Sitemap.create do
 
   Company.find_each do |company|
     add company_path(company), lastmod: company.updated_at
+  end
+
+  Occupation.find_each do |occupation|
+    add occupation_path(occupation), lastmod: occupation.updated_at
   end
 
 
