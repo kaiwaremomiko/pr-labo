@@ -21,9 +21,9 @@ SitemapGenerator::Sitemap.create do
 
   add companies_path, :priority => 0.7, :changefreq => 'daily' 
 
-  Company.find_each do |company|
-    add company_path(company), lastmod: company.updated_at
-  end
+  # Company.find_each do |company|
+  #   add company_path(company), lastmod: company.updated_at
+  # end
 
   add occupations_path, :priority => 0.7, :changefreq => 'daily' 
 
