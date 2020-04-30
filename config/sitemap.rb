@@ -13,13 +13,19 @@ SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider
 SitemapGenerator::Sitemap.create do
   add root_path
 
+  add npos_path, :priority => 0.7, :changefreq => 'daily' 
+
   Npo.find_each do |npo|
     add npo_path(npo), lastmod: npo.updated_at
   end
 
+  add companies_path, :priority => 0.7, :changefreq => 'daily' 
+
   Company.find_each do |company|
     add company_path(company), lastmod: company.updated_at
   end
+
+  add occupations_path, :priority => 0.7, :changefreq => 'daily' 
 
   Occupation.find_each do |occupation|
     add occupation_path(occupation), lastmod: occupation.updated_at
