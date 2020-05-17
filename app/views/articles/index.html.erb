@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<ul class="itemlist">
+<% @articles.each do |article| %>
+	<li>
+		<%= image_tag 'noimage.png', :size =>'70x70' %>
+		<dl>
+			<dt><%= article.title %></dt>
+			<dd class="txt"><%= article.text %></dd>
+		</dl>
+	</li>
+<% end %>
+</ul>
+<br>
+<br>
+<%= link_to 'New Article', new_article_path %>

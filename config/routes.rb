@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   resources :occupations
   resources :companies
   # get    '/login',   to: 'sessions#new'
