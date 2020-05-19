@@ -12,21 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :投稿者名 %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :記事タイトル %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
+    <%= form.label :記事本文 %>
+    <%= form.text_area :text, :size => "100x15" %>
   </div>
+
+  <div class="field">
+    <%= form.label :カテゴリー %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+   <%= form.label :img %>
+   <%= form.file_field :img, class: "image" %>
+  </div>
+
+  <p><%= form.check_box :remove_img %>画像を削除する</p>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<%= link_to '記事削除', article, method: :delete %>
+<br>
+<br>

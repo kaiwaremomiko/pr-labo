@@ -1,16 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<% image = image_tag 'noimage.png', :size =>'70x70' %>
+
 <ul class="itemlist">
 <% @articles.each do |article| %>
 	<li>
-		<%= image_tag 'noimage.png', :size =>'70x70' %>
+		<%= link_to image, article, class:"no-underline" %>
 		<dl>
-			<dt><%= article.title %></dt>
-			<dd class="txt"><%= article.text %></dd>
+			<dt><%= link_to article.title.truncate(20), article, class:"no-underline" %></dt>
+			<dd class="txt"><%= link_to strip_tags(article.text.truncate(50)), article,  class:"no-underline" %></dd>
 		</dl>
 	</li>
 <% end %>
 </ul>
 <br>
 <br>
-<%= link_to 'New Article', new_article_path %>
+
