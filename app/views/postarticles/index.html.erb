@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% content_for :noindex do %>
+<meta name="robots" content="noindex">
+<% end %>
+
+<h1>コラム記事管理画面</h1>
+<br>
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>記事本文</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.text %></td>
+        <td><%= link_to '記事閲覧', article %></td>
+        <td><%= link_to '記事を編集', edit_article_path(article) %></td>
+        <td><%= link_to '記事を削除', article, method: :delete, data: { confirm: '削除しますか？' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規作成', new_article_path %>

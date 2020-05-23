@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @article = Article.find_by(slug: params[:id])
   end
 
   # GET /articles/new
@@ -64,11 +65,11 @@ class ArticlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-      @article = Article.find(params[:id])
+      @article = Article.find_by(slug: params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:name, :title, :text, :category, :img)
+      params.require(:article).permit(:name, :title, :text, :category, :img, :slug)
     end
 end

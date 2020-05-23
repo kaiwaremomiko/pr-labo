@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :articles
   resources :occupations
   resources :companies
-  # get    '/login',   to: 'sessions#new'
+  get    '/postarticle',   to: 'postarticles#index'
   # post   '/login',   to: 'sessions#create'
   # delete '/logout',  to: 'sessions#destroy'
   root to: 'home#index'

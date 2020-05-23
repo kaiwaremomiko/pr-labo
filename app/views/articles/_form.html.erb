@@ -32,6 +32,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug %>
+  </div>
+
+  <div class="field">
    <%= form.label :img %>
    <%= form.file_field :img, class: "image" %>
   </div>
@@ -43,6 +48,5 @@
   </div>
 <% end %>
 
-<%= link_to '記事削除', article, method: :delete %>
 <br>
 <br>

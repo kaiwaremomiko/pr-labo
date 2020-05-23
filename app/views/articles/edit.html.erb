@@ -2,5 +2,6 @@
 <br>
 <%= render 'form', article: @article %>
 
-<%= link_to '記事に戻る', @article %> |
-<%= link_to '記事一覧に戻る', articles_path %>
+<%= link_to '記事削除', @article, method: :delete, data: { confirm: '削除しますか？' }%>
+
+<%= link_to '管理画面に戻る', '/postarticle' %>

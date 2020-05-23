@@ -1,0 +1,2 @@
+class Postarticle < ApplicationRecord
+end
