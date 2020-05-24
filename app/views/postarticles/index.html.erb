@@ -3,9 +3,8 @@
 <% content_for :noindex do %>
 <meta name="robots" content="noindex">
 <% end %>
-
-<h1>コラム記事管理画面</h1>
 <br>
+<h1>コラム記事管理画面</h1>
 <br>
 <br>
 <table>
@@ -16,7 +15,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @articles.each do |article| %>
       <tr>
@@ -31,5 +29,5 @@
 </table>
 
 <br>
-
+<br>
 <%= link_to '新規作成', new_article_path %>
