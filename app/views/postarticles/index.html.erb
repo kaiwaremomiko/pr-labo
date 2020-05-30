@@ -34,7 +34,7 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= article.text %></td>
+        <td><%= strip_tags(article.text.truncate(30)) %></td>
         <td><%= link_to '記事閲覧', article %></td>
         <td><%= link_to '記事を編集', edit_article_path(article) %></td>
         <td><%= link_to '記事削除', article, method: :delete, data: { confirm: '削除しますか？' }%></td>
