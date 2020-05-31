@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @article.title %></h1>
+<div class="article-element">
+<div class="article-element-child">
+<h1 class="article-h1"><%= @article.title %></h1>
 <br>
 <br>
-<p>執筆者：<%= @article.name %></p>
-<p>公開日：<%= @article.created_at.strftime('%Y/%m/%d') %></p>
-<p>最終編集日：<%= @article.updated_at.strftime('%Y/%m/%d') %></p>
+<p class="article-hosoku">執筆者：<%= @article.name %></p>
+<p class="article-hosoku">公開日：<%= @article.created_at.strftime('%Y/%m/%d') %></p>
+<p class="article-hosoku">最終編集日：<%= @article.updated_at.strftime('%Y/%m/%d') %></p>
 <br>
 <br>
-<%= simple_format(@article.text) %>
+<%= simple_format(@article.text.gsub(/<h2>/, '<h2 class="article-h2">').gsub(/<h3>/, '<h3 class="article-h3">').gsub(/<h4>/, '<h4 class="article-h4">')) %>
 <br>
 <br>
-<br>
-<%= link_to '記事一覧', articles_path %>
+</div>
+</div>
