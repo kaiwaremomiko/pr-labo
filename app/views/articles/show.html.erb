@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<% content_for :title do %>
+  <%= @article.title + "| PR-LABO" %>
+<% end %>
+
+<% breadcrumb :article, @article %>
+
 <div class="article-element">
 <div class="article-element-child">
 <h1 class="article-h1"><%= @article.title %></h1>

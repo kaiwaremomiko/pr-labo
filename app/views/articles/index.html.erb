@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<% content_for :title do %>
+  <%= "コラム一覧 | PR-LABO" %>
+<% end %>
+<% breadcrumb :articles %>
+
 <% image = image_tag 'noimage.png', :size =>'70x70' %>
 
 <ul class="itemlist">

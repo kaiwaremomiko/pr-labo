@@ -18,6 +18,15 @@ crumb :occupations do
   link '職業一覧', occupations_path
 end
 
+crumb :articles do
+  link 'コラム一覧', articles_path
+end
+
+crumb :article do |article|
+  link "#{article.title}", article_path(article)
+  parent :articles
+end
+
 crumb :company do |company|
   link "#{company.corporate_name}", company_path(company)
   parent :companies
