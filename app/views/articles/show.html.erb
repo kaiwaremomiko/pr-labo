@@ -11,9 +11,11 @@
 <h1 class="article-h1"><%= @article.title %></h1>
 <br>
 <br>
+
 <p class="article-hosoku">執筆者：<%= @article.name %></p>
 <p class="article-hosoku">公開日：<%= @article.created_at.strftime('%Y/%m/%d') %></p>
 <p class="article-hosoku">最終編集日：<%= @article.updated_at.strftime('%Y/%m/%d') %></p>
+<p class="article-img"><%= image_tag @article.img.url if @article.img? %></p>
 <br>
 <br>
 <%= simple_format(@article.text.gsub(/<h2>/, '<h2 class="article-h2">').gsub(/<h3>/, '<h3 class="article-h3">').gsub(/<h4>/, '<h4 class="article-h4">')) %>

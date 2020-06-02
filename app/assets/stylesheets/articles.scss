@@ -93,3 +93,8 @@
 	max-width: 100%;
 	word-wrap: break-word;
 }
+
+p.article-img img{
+	width: 100%;    /* 横幅を割合で指定 */
+    height: auto;  /* 高さは自動指定 */
+}
