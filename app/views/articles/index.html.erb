@@ -10,6 +10,7 @@
 	<li>
 		<%= link_to image, article, class:"no-underline" %>
 		<dl>
+			<dd class="txt-date"><%= link_to article.updated_at.strftime('%Y/%m/%d'), article,  class:"no-underline" %></dd>
 			<dt><%= link_to article.title.truncate(20), article, class:"no-underline" %></dt>
 			<dd class="txt"><%= link_to strip_tags(article.text.truncate(50)), article,  class:"no-underline" %></dd>
 		</dl>
