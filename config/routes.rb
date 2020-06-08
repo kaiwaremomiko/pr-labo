@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'sitemap', to: redirect('https://prlabbacket.s3.us-east-2.amazonaws.com/sitemaps/sitemap.xml.gz')
   get 'sitemap2', to: redirect('https://s3-us-east-2.amazonaws.com/prlabbacket/sitemaps2/sitemap.xml.gz')
   resources :npos
+  post '/mail', to: 'npos#mail', as: :mail
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

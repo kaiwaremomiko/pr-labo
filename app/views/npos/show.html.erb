@@ -70,5 +70,15 @@
 <br>
 <br>
 <%= link_to 'NPO法人一覧へ', npos_path %>
+<br>
+<br>
+<br>
+<%= h(flash[:notice]) %>
+<h1>メール送信フォーム</h1>
+<br>
+<%= form_with url: mail_path, local: true do |f| %>
+  <%= f.text_field :str %>
+  <%= f.submit "送信" %>
+<% end %>
 
 
