@@ -1,6 +1,8 @@
 class InquiryMailer < ApplicationMailer
-    def contact_mail(contact)
-        @contact = contact  
+    default from: 'prlaboinquiry@prlabo.net'
+    
+    def mail(str)
+        @contact = str
         mail to: "sunsukeyo1@gmail.com", subject: "メールのタイトル"
     end
 end

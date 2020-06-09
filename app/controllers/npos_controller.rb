@@ -7,12 +7,6 @@ class NposController < ApplicationController
     @npos = Npo.page(params[:page]).search(params[:search])
   end
 
-  def mail
-    InquiryMailer.mail(params[:str]).deliver_later  #メーラに作成したメソッドを呼び出す。
-    flash[:notice] = "メール送信完了" 
-    redirect_to root_url
-  end
-
   # GET /npos/1
   # GET /npos/1.json
   def show

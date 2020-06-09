@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'prlaboinquiry@prlabo.net'
+  default from: 'from@example.com'
   layout 'mailer'
 end
