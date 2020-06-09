@@ -6,8 +6,8 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      # InquiryMailer.mail(@contact).deliver
-      # flash[:success] = 'お問い合わせを受け付けました'
+      InquiryMailer.mail(@contact).deliver
+      flash[:success] = 'お問い合わせを受け付けました'
       redirect_to root_path
     else
       render :new
