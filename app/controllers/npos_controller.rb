@@ -8,8 +8,7 @@ class NposController < ApplicationController
   end
 
   def mail
-    TestMailer.testmail(params[:str]).deliver_later  #メーラに作成したメソッドを呼び出す。
-    flash[:notice] = "メール送信完了" 
+    TestMailer.testmail(params[:str],params[:email]).deliver_later  #メーラに作成したメソッドを呼び出す。
     redirect_to root_url
   end
 

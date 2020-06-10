@@ -79,6 +79,7 @@
 
 <%= form_with url: mail_path, local: true do |f| %>
   <%= f.text_field :str %>
+  <%= f.text_field :email %>
   <%= f.submit "送信" %>
 <% end %>
 
