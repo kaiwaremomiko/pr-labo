@@ -4,9 +4,12 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>こちらはメール本文です</h1>
+    <h1>詳細ページ経由で問い合わせがありました。</h1>
     <p>
-      <%= @str %>
+      企業名：<%= @corporate_name %>
+      名前：<%= @name %>
+      メールアドレス：<%= @email %>
+      本文：<%= @text %>
     </p>
   </body>
 </html>

@@ -8,7 +8,7 @@ class NposController < ApplicationController
   end
 
   def mail
-    TestMailer.testmail(params[:str],params[:email]).deliver_later  #メーラに作成したメソッドを呼び出す。
+    TestMailer.testmail(params[:corporate_name],params[:name],params[:email],params[:text]).deliver_later  #メーラに作成したメソッドを呼び出す。
     redirect_to root_url
   end
 

@@ -73,14 +73,33 @@
 <br>
 <br>
 <br>
-<%= h(flash[:notice]) %>
 
-<h1>メール送信フォーム</h1>
-
+<h1>お問い合わせ内容送信フォーム</h1>
+<br>
+<p>PR-LABOは「企業の魅力を発信する」Webサービスです。</p>
+<p>下記フォームから問い合わせをして頂くことにより、企業のページ内容の更新・充実化ができます。</p>
+<p>他にも質問や不明点などあれば何なりとお問い合わせください。</p>
+<br>
 <%= form_with url: mail_path, local: true do |f| %>
-  <%= f.text_field :str %>
-  <%= f.text_field :email %>
+  <div class="field">
+    <%= f.label :法人名 %>
+    <%= f.text_field :corporate_name, value: @npo.corporate_name %>
+  </div>
+  <div class="field">
+    <%= f.label :お名前 %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :メールアドレス %>
+    <%= f.text_field :email %>
+  </div>
+    <div class="field">
+    <%= f.label :お問い合わせ内容 %>
+    <%= f.text_area :text, :size => "80x15" %>
+  </div>
+  <div class="actions">
   <%= f.submit "送信" %>
+  </div>
 <% end %>
 
 
