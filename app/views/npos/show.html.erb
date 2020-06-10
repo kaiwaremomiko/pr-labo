@@ -73,5 +73,13 @@
 <br>
 <br>
 <br>
+<%= h(flash[:notice]) %>
+
+<h1>メール送信フォーム</h1>
+
+<%= form_with url: mail_path, local: true do |f| %>
+  <%= f.text_field :str %>
+  <%= f.submit "送信" %>
+<% end %>
 
 
