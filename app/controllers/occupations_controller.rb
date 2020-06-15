@@ -4,7 +4,7 @@ class OccupationsController < ApplicationController
   # GET /occupations
   # GET /occupations.json
   def index
-    @occupations = Occupation.all
+    @occupations = Occupation.page(params[:page]).per(30)
   end
 
   # GET /occupations/1
