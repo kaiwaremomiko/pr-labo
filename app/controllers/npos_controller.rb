@@ -9,7 +9,7 @@ class NposController < ApplicationController
 
   def mail
     TestMailer.testmail(params[:corporate_name],params[:name],params[:email],params[:text]).deliver_later  #メーラに作成したメソッドを呼び出す。
-    redirect_to root_url
+    redirect_to controller: 'static_pages', action: 'thanks'
   end
 
   # GET /npos/1

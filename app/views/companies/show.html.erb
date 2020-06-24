@@ -74,3 +74,39 @@
 <br>
 <br>
 <%= link_to '企業一覧へ', companies_path %>
+<br>
+<br>
+<br>
+<center>
+<h1 class="form-h1">お問い合わせフォーム</h1>
+<br>
+<p>PR-LABOは「企業・法人の魅力を発信する」Webサービスです。</p>
+<p>会員になって頂くことで、このページの内容の更新・充実化ができます。</p>
+<p>WEBを使った集客・採用活動を始めてみませんか？</p>
+<p>まずは下記フォームからお気軽にお問い合わせください。</p>
+<br>
+<%= form_with url: companymail_path, local: true do |f| %>
+  <div class="field">
+    <strong><%= f.label :法人名 %></strong>
+    <%= f.text_field :corporate_name, value: @company.corporate_name %>
+  </div>
+  <br>
+  <div class="field">
+    <strong><%= f.label :お名前 %></strong>
+    <%= f.text_field :name %>
+  </div>
+  <br>
+  <div class="field">
+    <strong><%= f.label :メールアドレス %></strong>
+    <%= f.text_field :email %>
+  </div>
+  <br>
+    <div class="field">
+    <strong><%= f.label :お問い合わせ内容 %></strong>
+    <%= f.text_area :text , :size => "50x15" %>
+  </div>
+  <div class="actions">
+  <%= f.submit "送信" %>
+  </div>
+<% end %>
+</center>

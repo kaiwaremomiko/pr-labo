@@ -1,3 +1,7 @@
+<% content_for :noindex do %>
+<meta name="robots" content="noindex">
+<% end %>
+
 <h1>記事を編集する</h1>
 <br>
 <%= render 'form', article: @article %>

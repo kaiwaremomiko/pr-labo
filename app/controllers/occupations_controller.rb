@@ -7,6 +7,11 @@ class OccupationsController < ApplicationController
     @occupations = Occupation.page(params[:page]).per(30)
   end
 
+  def search
+    @occupations = Occupation.where('category LIKE ?', "%#{params[:category]}%")
+    render :index
+  end
+
   # GET /occupations/1
   # GET /occupations/1.json
   def show

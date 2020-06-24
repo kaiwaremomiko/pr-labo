@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get    '/top',   to: 'top#index'
-  # post '/mail', to: 'top#mail', as: :mail;
+  get    '/top', to: 'top#index'
+  get    '/thanks', to: 'static_pages#thanks'
+  post '/mailcompany', to: 'companies#mail', as: :companymail;
   post '/mail', to: 'npos#mail', as: :mail;
   resources :articles
   resources :occupations
