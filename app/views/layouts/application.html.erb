@@ -3,6 +3,7 @@
   <head>
     <%= render 'layouts/google_tag_manager' if Rails.env.production? %>
     <%= yield :markup %>
+    <%= yield :smallchat %>
     <%= yield :noindex %> 
     <meta name="description" content="PR-LABO(PRラボ)は、企業・NPO・研究会などあらゆる団体の情報発信を支援するWEBサービスです。インターネットに詳しくない方でも、気軽に情報を発信でき、組織の魅力を世の中に伝えられるサービスを目指しています。">
     <title><%= content_for?(:title) ? yield(:title) : "団体・組織・法人の魅力を伝えるなら | PR-LABO"%></title>

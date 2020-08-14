@@ -11,6 +11,10 @@
 </script>
 <% end %>
 
+<% content_for :smallchat do %>
+<script src="https://embed.small.chat/T0197V2KEN5G019K64PWHE.js" async></script>
+<% end %>
+
 <% content_for :title do %>
   <%= @company.corporate_name + "を詳しく紹介！広報・採用・情報発信なら | PR-LABO" %>
 <% end %>
@@ -28,6 +32,8 @@
   <%= image_tag @company.img.url if @company.img? %>
 </p>
 
+<% text_unregisterd = "情報未登録" %>
+
 <table class="table03">
   <tr>
     <th>会社名</th>
@@ -43,23 +49,25 @@
   </tr>
   <tr>
     <th>電話番号</th>
-    <td><%= @company.tel_number %></td>
+    <td>
+    <%= @company.tel_number.present? ? @company.tel_number : text_unregisterd %>
+    </td>
   </tr>
   <tr>
     <th>設立</th>
-    <td><%= @company.establishment %></td>
+    <td><%= @company.establishment.present? ? @company.establisment : text_unregisterd %></td>
   </tr>
   <tr>
     <th>資本金</th>
-    <td><%= @company.capital %></td>
+    <td><%= @company.capital.present? ? @company.capital : text_unregisterd %></td>
   </tr>
   <tr>
     <th>事業領域</th>
-    <td><%= @company.work_field %></td>
+    <td><%= @company.work_field.present? ? @company.work_field : text_unregisterd %></td>
   </tr>
   <tr>
     <th>代表者</th>
-    <td><%= @company.representative %></td>
+    <td><%= @company.representative? ? @company.representative : text_unregisterd %></td>
   </tr>
 </table>
 

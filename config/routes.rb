@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :manufactures
   get    '/top', to: 'top#index'
   get    '/thanks', to: 'static_pages#thanks'
   post '/mailcompany', to: 'companies#mail', as: :companymail;
