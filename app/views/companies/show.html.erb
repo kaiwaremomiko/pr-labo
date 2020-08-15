@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<% text_unregisterd = "情報が登録されていません。" %>
+
 <% content_for :markup do %>
 <script type="application/ld+json">
 {
@@ -25,14 +27,30 @@
 <br>
 <div class="box27">
     <span class="box-title">会社紹介</span>
-    <p><%= simple_format(@company.pr) %></p>
+    <p><%= @company.pr.present? ? simple_format(@company.pr) : text_unregisterd %></p>
+</div>
+
+<br>
+<div class="box27">
+    <span class="box-title">採用情報</span>
+    <p><%= @company.pr.present? ? simple_format(@company.pr) : text_unregisterd %></p>
+</div>
+<br>
+
+<div class="box27">
+    <span class="box-title">イベント情報</span>
+    <p><%= @company.pr.present? ? simple_format(@company.pr) : text_unregisterd %></p>
+</div>
+<br>
+
+<div class="box27">
+    <span class="box-title">よくある質問</span>
+    <p><%= @company.pr.present? ? simple_format(@company.pr) : text_unregisterd %></p>
 </div>
 
 <p>
   <%= image_tag @company.img.url if @company.img? %>
 </p>
-
-<% text_unregisterd = "情報未登録" %>
 
 <table class="table03">
   <tr>
