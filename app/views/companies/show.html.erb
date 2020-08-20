@@ -33,19 +33,19 @@
 <br>
 <div class="box27">
     <span class="box-title">採用情報</span>
-    <p><%= @company.pr.present? ? simple_format(@company.pr) : text_unregisterd %></p>
+    <p><%= @company.recruit.present? ? simple_format(@company.recruit) : text_unregisterd %></p>
 </div>
 <br>
 
 <div class="box27">
     <span class="box-title">イベント情報</span>
-    <p><%= @company.pr.present? ? simple_format(@company.pr) : text_unregisterd %></p>
+    <p><%= @company.event.present? ? simple_format(@company.event) : text_unregisterd %></p>
 </div>
 <br>
 
 <div class="box27">
     <span class="box-title">よくある質問</span>
-    <p><%= @company.pr.present? ? simple_format(@company.pr) : text_unregisterd %></p>
+    <p><%= @company.faq.present? ? simple_format(@company.faq) : text_unregisterd %></p>
 </div>
 
 <p>
