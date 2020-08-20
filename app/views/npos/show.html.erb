@@ -36,17 +36,17 @@
 <br>
 <div class="box27">
     <span class="box-title">採用情報</span>
-    <p><%= @npo.pr.present? ? simple_format(@npo.pr) : text_unregisterd %></p>
+    <p><%= @npo.recruit.present? ? simple_format(@npo.recruit) : text_unregisterd %></p>
 </div>
 <br>
 <div class="box27">
     <span class="box-title">イベント情報</span>
-    <p><%= @npo.pr.present? ? simple_format(@npo.pr) : text_unregisterd %></p>
+    <p><%= @npo.event.present? ? simple_format(@npo.event) : text_unregisterd %></p>
 </div>
 <br>
 <div class="box27">
     <span class="box-title">よくある質問</span>
-    <p><%= @npo.pr.present? ? simple_format(@npo.pr) : text_unregisterd %></p>
+    <p><%= @npo.faq.present? ? simple_format(@npo.faq) : text_unregisterd %></p>
 </div>
 
 <p>
